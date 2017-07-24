@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="6dp"
+    android:layout_margin="4dp"
+    android:layout_width="fill_parent"
+    android:layout_height="100dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_centerVertical="true"
+            android:id="@+id/booksapp_image"
+            android:src="@drawable/content1"
+            android:scaleType="fitCenter"
+            android:layout_width="70dp"
+            android:layout_height="80dp"
+            android:contentDescription="@string/img_desc" />
+
+        <LinearLayout
+            android:id="@+id/booksapp_content"
+            android:padding="8dp"
+
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/booksapp_image"
+            android:layout_width="200dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:id="@+id/booksapp_name"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:maxLength="40"
+                android:textColor="@color/primary_text"
+                android:text="@string/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginBottom="3dp"
+                android:id="@+id/booksapp_author"
+                android:textSize="12sp"
+                android:textColor="@color/secondary_text"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RatingBar
+                android:layout_marginTop="3dp"
+                android:id="@+id/booksapp_rating"
+                style="?android:attr/ratingBarStyleSmall"
+                android:numStars="5"
+                android:rating="2.5"
+                android:stepSize="0.5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:text="@string/price"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textAlignment="viewEnd"
+            android:layout_toRightOf="@+id/booksapp_content"
+            android:textColor="@color/primary"
+            android:id="@+id/booksapp_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:text="@string/pages"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:textAlignment="viewEnd"
+            android:layout_toRightOf="@+id/booksapp_content"
+            android:textColor="@color/primary"
+            android:id="@+id/booksapp_pages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+</android.support.v7.widget.CardView>
